@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[BoardTasks]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [BoardId] UNIQUEIDENTIFIER NOT NULL, 
+    [TaskId] UNIQUEIDENTIFIER NOT NULL,
+	[IsActive] BIT NOT NULL, 
+    CONSTRAINT [FK_BoardTask_Board] FOREIGN KEY ([BoardId]) REFERENCES [Board]([Id]), 
+	CONSTRAINT [FK_BoardTask_Task] FOREIGN KEY ([TaskId]) REFERENCES [Task]([Id]), 
+)

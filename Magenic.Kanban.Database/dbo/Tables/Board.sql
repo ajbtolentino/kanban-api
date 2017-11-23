@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Board]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Name] VARCHAR(50) NOT NULL, 
+    [Description] VARCHAR(MAX) NULL, 
+    [IsActive] BIT NOT NULL
+)
